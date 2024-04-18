@@ -1,0 +1,132 @@
+
+    nav {
+        background-color: #444;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header, footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+    }
+    main{
+        background-color: #d6d6d6;
+        padding: 20px;
+        width: 60%;
+    }
+    aside{
+        background-color: rgb(186, 186, 186);
+        padding: 20px;
+        width: 34%;
+    }
+    main, aside {
+        display: inline-block;
+        vertical-align: top;
+        height: 60%;
+    }
+    #s1{
+        display: inline-block;
+        vertical-align: top;
+        width: 95%;
+        padding: 20px;
+        background-color: #333;
+        color: #f0f0f0;
+    }
+    #s2{
+        display: inline-block;
+        vertical-align: top;
+        width: 95%;
+        padding: 20px;
+        background-color: #090383;
+        color: #f0f0f0;
+    }
+    @media only screen and (max-width: 600px) {
+        main, aside {
+            display: block;
+            width: 100%;
+        }
+    }
+    #slider {
+        overflow: hidden;
+        height: 470px; 
+    }
+    
+    #slider figure {
+        position: relative;
+        width: 400%; 
+        margin: 0;
+        left: 0;
+        animation: 20s slider infinite;
+        display: flex;
+    }
+    
+    #slider figure img {
+        width: 25%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    
+    input[name="slide"] {
+        display: none; 
+    }
+    
+    #nav {
+        position: absolute;
+        bottom: 10px; 
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #nav label {
+        display: inline-block;
+        width: 10px; 
+        height: 10px;
+        background-color: #ff0000;
+        margin: 0 5px; 
+        cursor: pointer;
+        border-radius: 50%; 
+    }
+    
+    #nav label:hover {
+        background-color: #f80000; 
+    }
+    
+    input[name="slide"]:checked + #nav label {
+        background-color: #3300ff;
+    }
+    
+    #slide1:checked ~ figure {
+        margin-left: 0; 
+    }
+    
+    #slide2:checked ~ figure {
+        margin-left: -100%; 
+    }
+    
+    #slide3:checked ~ figure {
+        margin-left: -200%; 
+    }
+    #slide4:checked ~ figure {
+        margin-left: -300%;
+    }
+    
